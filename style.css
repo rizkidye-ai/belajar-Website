@@ -35,13 +35,20 @@ nav a {
     }
     input,
     select, 
-    textarea,
-    button {
+    textarea {
         width: 100%;
         padding: 10px;
         border: 1px solid #161070;
         border-radius: 4px;
         font-size:16px ;
+    }
+     button {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #161070;
+        border-radius: 4px;
+        font-size:16px ;
+        cursor: pointer;
 
     }
     img {
@@ -55,6 +62,9 @@ nav a {
     }
     th,td {
     border: 1px solid #d1d5db; padding: 10px; text-align: left;
+    }
+    ul {
+        padding-left: 20px;
     }
 
     footer{
