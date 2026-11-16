@@ -4,41 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html"><strong>Home</strong></a>
-            <a href="contact.html"><strong>Contact</strong></a>
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
         <main>
-            <section>
+            <section class="card">
                 <h1>Contact Me</h1>                
                 <form action="contact.html">
-                    <div>
+                    <div class="form-group">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
                     </div>
-                    <div>
+                    <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
                     </div>
-                    <div>
+                    <div class="form-group">
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" required></textarea>
                     </div>
-                    <div>
+                    <div class="form-group">
                     <label for="topic">Topic</label>
                     <select id="topic" name="topic">
-                        <option value="hirring">Remote</option>
+                        <option value="hiring">Remote</option>
                         <option value="project">Project Inquiries</option>
                     </select>
                     </div>
-                    <div>
+                    <div class="form-group">
                     <button type="submit">Send</button>
                     </div>                
-                </form>                
+                </form>
             </section>
         </main> 
         <footer>
