@@ -1,6 +1,29 @@
 * {
     box-sizing: border-box; margin: 0;padding: 0;
 }
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a{
+    color: #d1d5db;
+    text-decoration: none;
+    font-weight: bold
+}
+.strength-list {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.strength-item {
+  flex: 1;
+  padding: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
 body {
     font-family: 'Times New Roman', Times, serif;
     background-color: rgb(247, 245, 244);
@@ -10,6 +33,7 @@ body {
 header{
     background-color: #161070;
     padding: 16px 24px;
+    
 }
 nav a {
     color: white;
@@ -33,9 +57,7 @@ nav a {
         margin-bottom: 16px;
         font-weight: bold;
     }
-    input,
-    select, 
-    textarea {
+    input, select, textarea {
         width: 100%;
         padding: 10px;
         border: 1px solid #161070;
@@ -63,8 +85,23 @@ nav a {
     th,td {
     border: 1px solid #d1d5db; padding: 10px; text-align: left;
     }
-    ul {
-        padding-left: 20px;
+    .social-links{
+        list-style: none;
+        padding-left: 0;
+        display: flex;
+        gap: 12px;
+        margin-top: 12px;
+    }
+
+    .social-links a{
+        display: inline-block;
+        padding: 8px 16px;
+        border: 1px solid #040307;
+        border-radius: 4px;
+        text-decoration: none;
+        color: #06060e;
+        font-weight: bold;
+
     }
 
     footer{
