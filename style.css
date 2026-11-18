@@ -101,9 +101,33 @@ nav a {
         text-decoration: none;
         color: #06060e;
         font-weight: bold;
-
+    }
+    .project-grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 16px;
+        margin-top: 12px;
+    }
+    .project-card{
+        padding: 16px;
+        border: 1px solid #d1d1d1 ;
+        border-radius: 6px;
+        background: color #161070;
+        color: #080808;
     }
 
+    .tech-tags{
+        display: flex;
+        gap: 8px;
+        margin-top: 12px;
+    }.tech-tags span{
+        font-size: 12px;
+        font-weight: bold;
+        padding: 4px 8px;
+        background: color #e0e7ff;;
+        color: #161070;
+        border-radius: 4px;
+    }
     footer{
         text-align: center;
         padding: 16px;
