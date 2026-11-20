@@ -18,6 +18,7 @@ img{
     display: block;
     margin: 16px auto;
     max-width: 100%;
+
 }
 
 .brand img{
@@ -28,6 +29,7 @@ img{
   display: flex;
   gap: 16px;
   margin-top: 12px;
+
 }
 
 .strength-item {
@@ -45,7 +47,7 @@ body {
 header{
     background-color: var(--color-primary);
     padding: 16px 24px;
-    
+
 }
 nav a {
     color: #ffffff;
@@ -69,20 +71,27 @@ nav a:hover{
 }
 .form-group {
     margin-bottom: 16px;
-    }
-    label{
-        display: block;
-        margin-bottom: 16px;
-        font-weight: bold;
-    }
-    input, select, textarea {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #281eaf;
-        border-radius: 4px;
-        font-size:16px ;
-    }
-     button {
+}
+label{
+    display: block;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #281eaf;
+    border-radius: 4px;
+    font-size:16px ;
+}
+input:focus,
+select:focus,
+textarea:focus{
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(54, 93, 129, 0.459);
+}
+button {
         width: 100%;
         padding: 10px;
         border: 1px solid var(--color-bg);
@@ -126,7 +135,6 @@ nav a:hover{
         transition: all 0.2s ease;
     }
     .social-links a:hover{
-        transition: all 0.2s ease;
         transform: translateY(-2px);
     }
     .project-grid{
@@ -144,8 +152,7 @@ nav a:hover{
         transition: all 0.2s ease;
     }
     .project-card:hover{
-        transition: all 0.2s ease;
-        transform: translateY(-2px);
+    transform: translateY(-2px);
         
     }
     .tech-tags{
