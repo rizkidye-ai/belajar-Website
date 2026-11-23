@@ -199,3 +199,14 @@ button {
         }
 
     }
+    #theme-toggle {
+        width: auto;
+        padding: 6px 14px;
+        font-size: 14px;
+    }
+    .dark-mode,
+    .dark-mode .card,
+    .dark-mode main>h1{
+        color: #f8fafc;
+        background-color: #0f172a;
+    }
