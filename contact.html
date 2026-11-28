@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,52 +8,56 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <header>
         <div class="navbar">
             <a href="index.html" class="brand">
                 <img src="Futuristic MMR Technology Emblem.png" alt="MMR Tecnologi">
             </a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="contact.html">Contact</a>
-            <button id="theme-toggle" type="button">Dark Mode</button>
-        </nav>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <button id="theme-toggle" type="button">Dark Mode</button>
+            </nav>
         </div>
     </header>
-        <main>
-            <section class="card">
-                <h1>Contact Me</h1>                
-                <form action="contact.html">
-                    <div class="form-group">
+    <main>
+        <section class="card">
+            <h1>Contact Me</h1>
+            <form id="contact-form" novalidate>
+                <div class="form-group">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
+                </div>
+                <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
+                </div>
+                <div class="form-group">
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <div class="form-group">
+                </div>
+                <div class="form-group">
                     <label for="topic">Topic</label>
                     <select id="topic" name="topic">
                         <option value="hiring">Remote</option>
                         <option value="project">Project Inquiries</option>
                     </select>
-                    </div>
-                    <div class="form-group">
+                </div>
+                <div class="form-group">
                     <button type="submit">Send</button>
-                    </div>                
-                </form>
-            </section>
-        </main> 
-        
-        <footer>
-     <p>&copy; 2026 My Website. All rights reserved.</p>
-</footer>       
+                    <p id="form-feedback"></p>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Website. All rights reserved.</p>
+    </footer>
 
 </body>
+
 </html>

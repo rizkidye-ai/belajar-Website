@@ -29,44 +29,67 @@ footerText.textContent = `© 2026 ${fullName}. All rights reserved.`;
 
 
 const projects = [
-  {title:"POS Cashier App",description : "A digital point-of-sale application designed to streamline sales transactions, manage product records, calculate payments, and monitor daily sales activities efficiently.", tag:"Point of Sale"},
-  {title:"Regional Fiscal Dashboard",description : "An interactive dashboard designed to visualize and analyze regional financial data, including local revenue, regional expenditures, and fiscal indicators to support data-driven decision-making.", tag:"Data Analytics"},
-  {title:"Personal Portfolio",description : "A personal website showcasing professional profiles, skills, experience, and projects through a modern, responsive, and user-friendly interface.", tag:"Web Development"},
-  {title:"Task Tracker UI",description : "A task management interface that helps users organize daily activities, set priorities, track progress, and manage tasks through a clean and intuitive design.", tag:"UI/UX Design"},
-  {title:"Wedding Invitation Site",description : "An elegant and responsive digital wedding invitation website designed to share special moments, event details, and RSVP information.", tag:"Web Design"}
+  { title: "POS Cashier App", description: "A digital point-of-sale application designed to streamline sales transactions, manage product records, calculate payments, and monitor daily sales activities efficiently.", tag: "Point of Sale" },
+  { title: "Regional Fiscal Dashboard", description: "An interactive dashboard designed to visualize and analyze regional financial data, including local revenue, regional expenditures, and fiscal indicators to support data-driven decision-making.", tag: "Data Analytics" },
+  { title: "Personal Portfolio", description: "A personal website showcasing professional profiles, skills, experience, and projects through a modern, responsive, and user-friendly interface.", tag: "Web Development" },
+  { title: "Task Tracker UI", description: "A task management interface that helps users organize daily activities, set priorities, track progress, and manage tasks through a clean and intuitive design.", tag: "UI/UX Design" },
+  { title: "Wedding Invitation Site", description: "An elegant and responsive digital wedding invitation website designed to share special moments, event details, and RSVP information.", tag: "Web Design" }
 ];
 console.log(projects[3].title);
 
 const projectGrid = document.querySelector(".project-grid");
 console.log(projectGrid);
-if (projectGrid){
-  projectGrid.innerHTML="";
+if (projectGrid) {
+  projectGrid.innerHTML = "";
 
 
-for (let i = 0;
-i< projects.length; i++){
-  console.log(projects[i].title);
-  projectGrid.innerHTML+= 
-  `<article class="project-card">
+  for (let i = 0;
+    i < projects.length; i++) {
+    console.log(projects[i].title);
+    projectGrid.innerHTML +=
+      `<article class="project-card">
     <h3>${projects[i].title}</h3>
     <p>${projects[i].description}</p>
     <div class="tech-tags">
     <span> ${projects[i].tag}</span>
     </div>
         </article>`;
- }
+  }
+}
+const form = document.querySelector("form");
+if (form) {
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const nameValue = form.querySelector("#name").value.trim();
+    const emailValue = form.querySelector("#email").value.trim();
+    const messageValue = form.querySelector("#message").value.trim();
+    const feedback = form.querySelector("#form-feedback");
+
+    if (nameValue === "" || emailValue === "" || messageValue === "") {
+      feedback.textContent = "Please fill in all required fields.";
+      feedback.style.color = "#dc2626";
+    }
+    else if (!emailValue.includes("@")) {
+      feedback.textContent = "Please enter a valid email address.";
+      feedback.style.color = "#dc2626";
+    }
+    else {
+      feedback.textContent = `Thank you, ${nameValue}! Your message has been received.`;
+      feedback.style.color = "#16a34a";
+      form.reset();
+    }
+  });
 }
 
-const themeBtn= document.querySelector("#theme-toggle")
+const themeBtn = document.querySelector("#theme-toggle")
 
-themeBtn.addEventListener("click", function (){
-document.body.classList.toggle("dark-mode");
+themeBtn.addEventListener("click", function () {
+  document.body.classList.toggle("dark-mode");
 
-if (document.body.classList.contains("dark-mode")){
-  themeBtn.textContent="Light Mode";
-}
-else
-{
-  themeBtn.textContent="Dark Mode";
-}
+  if (document.body.classList.contains("dark-mode")) {
+    themeBtn.textContent = "Light Mode";
+  }
+  else {
+    themeBtn.textContent = "Dark Mode";
+  }
 });
